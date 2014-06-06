@@ -5,8 +5,13 @@ public class ConvertRomanNumerals{
 	public String convertRoman(int number){
 
 		String romanNum ="";
-		for(int i=0;i<number;i++){
-			romanNum += "I";
+		if (number ==4){
+			return "IV";
+		}
+		else{
+			for(int i=0;i<number;i++){
+				romanNum += "I";
+			}
 		}
 		return romanNum;
 	}

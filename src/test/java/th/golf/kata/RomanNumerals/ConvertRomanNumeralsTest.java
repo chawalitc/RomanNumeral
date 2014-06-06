@@ -25,5 +25,10 @@ public class ConvertRomanNumeralsTest{
 		assertEquals("III",romanNum);
 	}
 
+	@Test
+	public void testConvert4ReturnIV(){
+		String romanNum = romanNumerals.convertRoman(4);
+		assertEquals("IV",romanNum);
+	}
 
 }
