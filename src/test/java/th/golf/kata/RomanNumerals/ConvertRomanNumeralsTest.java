@@ -19,4 +19,11 @@ public class ConvertRomanNumeralsTest{
 		assertEquals("II",romanNum);
 	}
 
+	@Test
+	public void testConvert3ReturnIII(){
+		String romanNum = romanNumerals.convertRoman(3);
+		assertEquals("III",romanNum);
+	}
+
+
 }
