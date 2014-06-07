@@ -5,7 +5,10 @@ public class ConvertRomanNumerals{
 	public String convertRoman(int number){
 
 		String romanNum ="";
-		if (number ==4){
+		if (number ==5){
+			return "V";
+		}
+		else if (number ==4){
 			return "IV";
 		}
 		else{
