@@ -27,4 +27,8 @@ public class ConvertRomanNumeralsTest{
 		assertEquals("VI",romanNumerals.convertRoman(6));
 	}
 
+	@Test
+	public void testConvert9ReturnIX(){
+		assertEquals("IX",romanNumerals.convertRoman(9));
+	}
 }

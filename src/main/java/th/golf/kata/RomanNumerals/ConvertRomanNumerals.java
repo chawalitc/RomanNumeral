@@ -6,6 +6,10 @@ public class ConvertRomanNumerals{
 
 		String romanNum ="";
 
+		if(number == 9 ){
+			romanNum = "IX";
+			number = number-9;
+		}
 		if(number >= 5){
 			romanNum += "V";
 			number = number-5;
