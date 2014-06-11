@@ -1,19 +1,31 @@
 package th.golf.kata.RomanNumerals;
 
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+
 public class ConvertRomanNumerals{
 	
 	public String convertRoman(int number){
 
 		String romanNum ="";
+		List<Integer> romans = new ArrayList<Integer>();
+		romans.add(9);
+		romans.add(5);
+		romans.add(4);
 
-		romanNum += getRomanNumber(number,9,"IX");
-		number = minusRoman(number,9);
+		Map<Integer,String> mapRoman = new HashMap<Integer,String>();
+		mapRoman.put(9,"IX");
+		mapRoman.put(5,"V");
+		mapRoman.put(4,"IV");
 
-		romanNum += getRomanNumber(number,5,"V");
-		number = minusRoman(number,5);
-
-		romanNum += getRomanNumber(number,4,"IV");
-		number = minusRoman(number,4);
+		for  (Integer num : romans) {	
+			if(number >= num){
+				romanNum += mapRoman.get(num);
+				number = number-num;
+			}
+		}
 
 		for(int i=0;i<number;i++){
 			romanNum += "I";			
@@ -21,17 +33,4 @@ public class ConvertRomanNumerals{
 		return romanNum;
 	}
 
-	private int minusRoman (int number,int compareNum) {
-		if(number >= compareNum){
-			number = number-compareNum;
-		}
-		return number;
-	}
-
-	private String getRomanNumber (int number,int compareNum ,String romanNum) {
-		if(number >= compareNum){
-			return romanNum;
-		}
-		return "";
-	}
 }
