@@ -9,38 +9,36 @@ public class ConvertRomanNumeralsTest{
 
 	@Test
 	public void testConvert1ReturnI(){	
-		String romanNum = romanNumerals.convertRoman(1);
-		assertEquals("I",romanNum);
+		assertEquals("I",romanNumerals.convertRoman(1));
 	}
 
 	@Test
 	public void testConvert2ReturnII(){
-		String romanNum = romanNumerals.convertRoman(2);
-		assertEquals("II",romanNum);
+		assertEquals("II",romanNumerals.convertRoman(2));
 	}
 
 	@Test
 	public void testConvert3ReturnIII(){
-		String romanNum = romanNumerals.convertRoman(3);
-		assertEquals("III",romanNum);
+		assertEquals("III",romanNumerals.convertRoman(3));
 	}
 
 	@Test
 	public void testConvert4ReturnIV(){
-		String romanNum = romanNumerals.convertRoman(4);
-		assertEquals("IV",romanNum);
+		assertEquals("IV",romanNumerals.convertRoman(4));
 	}
 
 	@Test
 	public void testConvert5ReturnV(){
-		String romanNum = romanNumerals.convertRoman(5);
-		assertEquals("V",romanNum);
+		assertEquals("V",romanNumerals.convertRoman(5));
 	}
 
 	@Test
 	public void testConvert6ReturnVI(){
-		String romanNum = romanNumerals.convertRoman(6);
-		assertEquals("VI",romanNum);
+		assertEquals("VI",romanNumerals.convertRoman(6));
 	}
 
+	@Test
+	public void testConvert7ReturnVII(){
+		assertEquals("VII",romanNumerals.convertRoman(7));
+	}
 }
