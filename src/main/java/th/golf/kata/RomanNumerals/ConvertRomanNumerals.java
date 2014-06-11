@@ -5,20 +5,17 @@ public class ConvertRomanNumerals{
 	public String convertRoman(int number){
 
 		String romanNum ="";
-		
-		if (number == 6){
-			return "VI";
+
+		if(number >= 5){
+			romanNum += "V";
+			number = number-5;
 		}
-		else if (number == 5){
-			return "V";
+		if(number == 4 ){
+			romanNum = "IV";
+			number = number-4;
 		}
-		else if (number == 4){
-			return "IV";
-		}
-		else{
-			for(int i=0;i<number;i++){
-				romanNum += "I";
-			}
+		for(int i=0;i<number;i++){
+			romanNum += "I";			
 		}
 		return romanNum;
 	}
